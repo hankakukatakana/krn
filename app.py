@@ -9,7 +9,7 @@ def lifeline():
 
 @app.route("/gas")
 def gas():
-    return render_template('gas.html' )
+    return render_template('gas.html')
 
 @app.route("/denki")
 def denki():
