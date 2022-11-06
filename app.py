@@ -4,19 +4,19 @@ from flask import render_template
 app = Flask(__name__)
 
 @app.route("/")
-def hello_world():
+def lifeline():
     return "<p>Hello, World!</p>"
 
 @app.route("/gas")
-def hello_world():
-    return render_template('gas.html')
+def gas():
+    return render_template('gas.html' )
 
 @app.route("/denki")
-def hello_world():
+def denki():
     return render_template('denki.html')
 
 @app.route("/suidou")
-def hello_world():
+def suidou():
     return render_template('suidou.html')
 
 if __name__ == '__main__':
