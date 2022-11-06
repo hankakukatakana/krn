@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def lifeline():
-    return "<p>Hello, World!</p>"
+    return render_template('lifline.html' )
 
 @app.route("/gas")
 def gas():
