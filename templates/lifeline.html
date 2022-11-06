@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-  <h1></h1>
-  <a href="{{ url_for('gas') }}">GAS</a>
-  <a href="{{ url_for('denki') }}">Denki</a>
-  <a href="{{ url_for('suidou') }}">Suidou</a>
-
+<h1></h1>
+<ul>
+    <a href="{{ url_for('gas') }}">GAS</a>
+    <a href="{{ url_for('denki') }}">Denki</a>
+    <a href="{{ url_for('suidou') }}">Suidou</a>
+</ul>
 {% endblock %}

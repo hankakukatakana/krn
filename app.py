@@ -19,6 +19,10 @@ def denki():
 def suidou():
     return render_template('suidou.html')
 
+@app.route("/<name>")
+def lifeline(name):
+    return render_template('lifline.html' name=name)
+
 if __name__ == '__main__':
     app.debug = True
     app.run(host='localhost', port=5000)
