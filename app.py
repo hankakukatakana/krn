@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def lifeline():
-    return render_template('lifline.html' )
+    return render_template('lifeline.html' )
 
 @app.route("/gas")
 def gas():
@@ -19,10 +19,10 @@ def denki():
 def suidou():
     return render_template('suidou.html')
 
-@app.route("/<name>")
-def lifeline(name):
-    return render_template('lifline.html' name=name)
+@app.route("/test")
+def test():
+    return render_template('test.html')
+
 
 if __name__ == '__main__':
-    app.debug = True
-    app.run(host='localhost', port=5000)
+    app.run(debug=True, host='localhost', port=6000)
