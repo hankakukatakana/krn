@@ -1,21 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1></h1>
-<table border="1">
-    <tr>
-        <th>月</th>
-        <th>種類</th>
-        <th>金額</th>
-    </tr>
-    {% for lifeline in lifelines %}
-    <tr>
-        <th>{{ lifeline.mm }}</th>
-        <th>{{ lifeline.category }}</th>
-        <th>{{ lifeline.prise }}</th>
-    </tr>
-    {% endfor %}
-</table>
+<h1>家計簿</h1>
+    <p>{{ mm }}月</p>
+{% if lifelines == [] %}
+    <p>データベースが空です</p>
+{% else %}
+    <table border="1">
+        <tr>
+            <th>月</th>
+            <th>種類</th>
+            <th>金額</th>
+        </tr>
+        {% for lifeline in lifelines %}
+        <tr>
+            <th>{{ lifeline.mm }}</th>
+            <th>{{ lifeline.category }}</th>
+            <th>{{ lifeline.prise }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
 
 <p>各生活費はコチラ</p>
 <ul>

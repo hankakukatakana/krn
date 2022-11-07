@@ -2,6 +2,21 @@
 {% block content %}
 
   <h1>{{ name }}</h1>
+
+    <table border="1">
+      <tr>
+          <th>月</th>
+          <th>種類</th>
+          <th>金額</th>
+      </tr>
+      {% for element in elements %}
+      <tr>
+          <th>{{ lifeline.mm }}</th>
+          <th>{{ lifeline.category }}</th>
+          <th>{{ lifeline.prise }}</th>
+      </tr>
+      {% endfor %}
+    </table>
   <a href="{{ url_for('home') }}">modoru</a>
 
 {% endblock %}

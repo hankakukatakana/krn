@@ -2,11 +2,7 @@
 {% block content %}
 
 <h1>{{ name }}</h1>
-<select name="test" size="1">
-    <option>電気</option>
-    <option>ガス</option>
-    <option>水道</option>
-</select>
+
 <form method="post" action="{{ url_for('register') }}">
     <table>
         <tr>
@@ -16,7 +12,13 @@
         </tr>
         <tr>
             <td><input type="month" name="mm"</td>
-            <td><input type="text" name="category"</td>
+            <td>
+                <select name="category" size="1">
+                    <option>電気</option>
+                    <option>ガス</option>
+                    <option>水道</option>
+                </select>
+            </td>
             <td><input type="text" name="price"</td>
         </tr>
     </table>
