@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ name }}</h1>
+
+<form method="post" action="{{ url_for('register') }}">
+    <table>
+        <tr>
+            <th>mm</th>
+            <th>category</th>
+            <th>prise</th>
+        </tr>
+        <tr>
+            <td><input type="text" name="mm"</td>
+            <td><input type="text" name="category"</td>
+            <td><input type="text" name="price"</td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" value="touroku">
+</form>
+
+  <a href="{{ url_for('home') }}">modoru</a>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1></h1>
+<table border="1">
+    <tr>
+        <th>月</th>
+        <th>種類</th>
+        <th>金額</th>
+    </tr>
+    {% for lifeline in lifelines %}
+    <tr>
+        <th>{{ lifeline.mm }}</th>
+        <th>{{ lifeline.category }}</th>
+        <th>{{ lifeline.prise }}</th>
+    </tr>
+    {% endfor %}
+</table>
+
+<p>各生活費はコチラ</p>
+<ul>
+    <a href="{{ url_for('gas') }}">GAS</a>
+    <a href="{{ url_for('denki') }}">Denki</a>
+    <a href="{{ url_for('suidou') }}">Suidou</a>
+</ul>
+<ul>
+    <a href="{{ url_for('form') }}">form</a>
+</ul>
+
+{% endblock %}
