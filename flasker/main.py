@@ -8,7 +8,7 @@ dbname = 'lifeline.db'
 @app.route("/")
 def home():
     today = datetime.today()
-    mm = today.month
+    mm = datetime.strftime(today, '%Y-%m')
     con = sqlite3.connect(dbname)
     db_lifeline = con.execute('SELECT * FROM lifeline').fetchall()
     con.close()
