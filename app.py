@@ -8,20 +8,20 @@ def lifeline():
     return render_template('lifeline.html' )
 
 @app.route("/gas")
+    name = 'Gas'
 def gas():
-    return render_template('gas.html')
+    return render_template('category.html')
 
 @app.route("/denki")
+    name = 'Denki'
 def denki():
-    return render_template('denki.html')
+    return render_template('category.html')
 
 @app.route("/suidou")
+    name = 'Suidou'
 def suidou():
-    return render_template('suidou.html')
+    return render_template('category.html')
 
-@app.route("/test")
-def test():
-    return render_template('test.html')
 
 
 if __name__ == '__main__':
