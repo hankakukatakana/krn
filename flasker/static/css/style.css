@@ -1,0 +1,11 @@
+body {
+    margin: auto;
+}
+table {
+    table-layout: fixed;
+    width: 350px;
+    color: aqua;
+}
+a {
+    color: aqua;
+}
