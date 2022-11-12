@@ -2,7 +2,7 @@
 {% block content %}
 
   <h1>{{ name }}</h1>
-
+  <div id="main">
     <table border="1">
       <tr>
           <th>月</th>
@@ -17,6 +17,8 @@
       </tr>
       {% endfor %}
     </table>
+  </div>
+  
   <a href="{{ url_for('home') }}">modoru</a>
 
 {% endblock %}
