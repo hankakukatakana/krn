@@ -5,13 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Seikatu</title>
 </head>
 <body>
+    <div class="container">
+        <p>家計簿</p>
     {% block content %}
     {% endblock %}
-
+    </div>  
     <ul>
+        <a href="{{ url_for('gas') }}">GAS</a>
+        <a href="{{ url_for('denki') }}">Denki</a>
+        <a href="{{ url_for('suidou') }}">Suidou</a>
+        <a href="{{ url_for('form') }}">form</a>
         <a href="https://github.com/hankakukatakana/krn">sauce cord</a>
     </ul>
 </body>

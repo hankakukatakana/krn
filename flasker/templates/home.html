@@ -6,6 +6,7 @@
 {% if lifelines == [] %}
     <p>データベースが空です</p>
 {% else %}
+    <p>各生活費はコチラ</p>
     <table border="1">
         <tr>
             <th>月</th>
@@ -21,15 +22,5 @@
         {% endfor %}
     </table>
 {% endif %}
-
-<p>各生活費はコチラ</p>
-<ul>
-    <a href="{{ url_for('gas') }}">GAS</a>
-    <a href="{{ url_for('denki') }}">Denki</a>
-    <a href="{{ url_for('suidou') }}">Suidou</a>
-</ul>
-<ul>
-    <a href="{{ url_for('form') }}">form</a>
-</ul>
 
 {% endblock %}
