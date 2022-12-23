@@ -8,3 +8,9 @@ table {
 a {
     color: aqua;
 }
+container{
+    background-color: gray;
+}
+ul{
+    padding-right: 50px;
+}
