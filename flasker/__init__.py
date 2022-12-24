@@ -1,5 +1,5 @@
 from flask import Flask
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./templates/images')
 import flasker.main
 
 from flasker import db
